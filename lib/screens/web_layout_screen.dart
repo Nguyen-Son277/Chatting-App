@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:chatting_app_nt109n21/colors.dart';
-// ignore: unused_import
-import 'package:chatting_app_nt109n21/info.dart';
-import 'package:chatting_app_nt109n21/widgets/chat_list.dart';
 import 'package:chatting_app_nt109n21/widgets/web_chat_appbar.dart';
-import 'package:chatting_app_nt109n21/widgets/contacts_list.dart';
-// ignore: unused_import
-import 'package:chatting_app_nt109n21/widgets/my_message_card.dart';
-// ignore: unused_import
-import 'package:chatting_app_nt109n21/widgets/sender_message_card.dart';
+import 'package:chatting_app_nt109n21/features/chat/widgets/contacts_list.dart';
 import 'package:chatting_app_nt109n21/widgets/web_profile_bar.dart';
 import 'package:chatting_app_nt109n21/widgets/web_search_bar.dart';
 
@@ -49,9 +42,9 @@ class WebLayoutScreen extends StatelessWidget {
               children: [
                 const ChatAppBar(),
                 const SizedBox(height: 20),
-                const Expanded(
-                  child: ChatList(),
-                ),
+                // const Expanded(
+                //   child: ChatList(),
+                // ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.07,
                   padding: const EdgeInsets.all(10),
