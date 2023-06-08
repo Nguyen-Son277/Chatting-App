@@ -25,6 +25,8 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
     setState(() {});
   }
 
+
+
   void createGroup() {
     if (groupNameController.text.trim().isNotEmpty && image != null) {
       ref.read(groupControllerProvider).createGroup(
@@ -86,7 +88,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
               child: TextField(
                 controller: groupNameController,
                 decoration: const InputDecoration(
-                  hintText: 'Enter Group Name',
+                  hintText: 'Enter Name chat',
                 ),
               ),
             ),

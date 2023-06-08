@@ -1,5 +1,7 @@
 import 'package:chatting_app_nt109n21/common/widgets/loader.dart';
 import 'package:chatting_app_nt109n21/features/auth/controller/auth_controller.dart';
+// import 'package:chatting_app_nt109n21/features/call/controller/call_controller.dart';
+// import 'package:chatting_app_nt109n21/features/call/screens/call_pickup_screen.dart';
 import 'package:chatting_app_nt109n21/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:chatting_app_nt109n21/colors.dart';
@@ -20,6 +22,7 @@ class MobileChatScreen extends ConsumerWidget {
     required this.uid,
     required this.isGroupChat,
     required this.profilePic,
+    
   }) : super(key: key);
 
   // void makeCall(WidgetRef ref, BuildContext context) {
@@ -34,13 +37,17 @@ class MobileChatScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    
     return /*CallPickupScreen(
-      scaffold:*/ Scaffold(
+      scaffold: */Scaffold(
         appBar: AppBar(
           backgroundColor: appBarColor,
-          title: isGroupChat
+          
+          title: 
+          isGroupChat
               ? Text(name)
-              : StreamBuilder<UserModel>(
+              : 
+              StreamBuilder<UserModel>(
                   stream: ref.read(authControllerProvider).userDataById(uid),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
@@ -90,8 +97,7 @@ class MobileChatScreen extends ConsumerWidget {
             ),
           ],
         ),
-      // ),
-      );
-    // );
+      
+    );
   }
 }
