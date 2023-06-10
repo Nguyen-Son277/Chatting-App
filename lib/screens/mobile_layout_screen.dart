@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:chatting_app_nt109n21/common/utils/utils.dart';
 import 'package:chatting_app_nt109n21/features/auth/controller/auth_controller.dart';
+import 'package:chatting_app_nt109n21/features/auth/screens/user_infomation_screen.dart';
 import 'package:chatting_app_nt109n21/features/group/screen/create_group_screen.dart';
 import 'package:chatting_app_nt109n21/features/select_contacts/screens/select_contacts_screen.dart';
 import 'package:chatting_app_nt109n21/features/status/screens/confirm_status_screen.dart';
@@ -59,7 +60,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           backgroundColor: appBarColor,
           centerTitle: false,
           title: const Text(
-            'WhatsApp',
+            'Chatting App',
             style: TextStyle(
               fontSize: 20,
               color: Colors.grey,
@@ -85,6 +86,15 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
                     () => Navigator.pushNamed(
                         context, CreateGroupScreen.routeName),
                   ),
+                ),
+                PopupMenuItem(
+                  child: const Text(
+                    'Edit profile',
+                  ),
+                  onTap: () => Future(
+                    () => Navigator.pushNamed(
+                        context, UserInformationScreen.routeName),
+                  ),
                 )
               ],
             ),
@@ -102,12 +112,12 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
               Tab(
                 text: 'CHATS',
               ),
-              // Tab(
-              //   text: 'STATUS',
-              // ),
-              // Tab(
-              //   text: 'CALLS',
-              // ),
+              Tab(
+                text: 'STORY',
+              ),
+              Tab(
+                text: 'CALLS',
+              ),
             ],
           ),
         ),

@@ -29,7 +29,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Chat App UI',
+      title: 'Chatting App',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
         appBarTheme: const AppBarTheme(
